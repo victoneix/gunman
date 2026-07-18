@@ -12,7 +12,7 @@ moving = function(){
 	
 	vspd += grav;
 	vspd = clamp(vspd,-7, 7);
-
+	shot = clamp(shot, -1, 70);
 
 	if(place_meeting(x,y+1,obj_collision) && _jump){
 		vspd -= 7;
