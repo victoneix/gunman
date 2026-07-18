@@ -4,6 +4,8 @@
   "name": "Gunman",
   "resources": [
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":1,},
+    {"id":{"name":"obj_billet","path":"objects/obj_billet/obj_billet.yy",},"order":2,},
+    {"id":{"name":"spr_bullet","path":"sprites/spr_bullet/spr_bullet.yy",},"order":2,},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},"order":1,},
     {"id":{"name":"spr_collision","path":"sprites/spr_collision/spr_collision.yy",},"order":0,},
     {"id":{"name":"obj_collision","path":"objects/obj_collision/obj_collision.yy",},"order":0,},

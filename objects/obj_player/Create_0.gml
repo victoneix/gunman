@@ -3,9 +3,12 @@ hspd = 0;
 vspd = 0;
 grav = 0.3;
 
+shot_max = 8;
+shot = shot_max;
+
 moving = function(){
 	var _jump = keyboard_check_pressed(vk_space);
-	var _shoter = keyboard_check_pressed(vk_control);
+	var _shoter = keyboard_check(vk_control);
 	
 	vspd += grav;
 	vspd = clamp(vspd,-7, 7);
@@ -13,6 +16,13 @@ moving = function(){
 
 	if(place_meeting(x,y+1,obj_collision) && _jump){
 		vspd -= 7;
+	}
+	
+	shot--;
+	if(_shoter && shot <= 0){
+		var _bullet = instance_create_layer(x+8, y-12, layer, obj_billet);
+		_bullet.hspeed = 3;
+		shot = shot_max;
 	}
 }
 
