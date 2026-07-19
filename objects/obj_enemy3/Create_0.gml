@@ -1,4 +1,6 @@
 // Inherit the parent event
 event_inherited();
-var _hspd = random_range(2.6, 3.8);
+
+var _hspd = random_range(2, 2.6);
 hspeed = -_hspd;
+alarm[0] = 60;
