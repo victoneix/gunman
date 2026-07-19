@@ -1,9 +1,9 @@
 spd = 2; 
 hspd = 0;
 vspd = 0;
-grav = 0.3;
+grav = 0.18;
 
-shot_max = 8;
+shot_max = 10;
 shot = shot_max;
 
 moving = function(){
@@ -14,14 +14,15 @@ moving = function(){
 	vspd = clamp(vspd,-7, 7);
 	shot = clamp(shot, -1, 70);
 
-	if(place_meeting(x,y+1,obj_collision) && _jump){
-		vspd -= 7;
+	if(_jump){
+		vspd = 0;
+		vspd -= 4.5;
 	}
 	
 	shot--;
 	if(_shoter && shot <= 0){
-		var _bullet = instance_create_layer(x+8, y-12, layer, obj_billet);
-		_bullet.hspeed = 3;
+		var _bullet = instance_create_layer(x+8, y, layer, obj_billet);
+		_bullet.hspeed = 2.4;
 		shot = shot_max;
 	}
 }
