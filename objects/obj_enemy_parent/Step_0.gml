@@ -1,1 +1,1 @@
-if(x <= -64) instance_destroy();
+if(x <= -64) instance_destroy(id, false);

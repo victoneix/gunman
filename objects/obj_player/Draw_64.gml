@@ -1,0 +1,1 @@
+draw_icon(spr_icon_life, life);
